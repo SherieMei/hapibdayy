@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+  background-color: black; /* changed from gradient to solid black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff; /* white text for contrast */
+}
+
+.card {
+  background: #111; /* dark gray card to match black background */
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  width: 85vw;
+  max-width: 700px;
+  padding: 2em;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.card img.birthday {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.text h1 {
+  color: #a28bff; /* soft violet accent */
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.text p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1.05em;
+}
+
+.muted {
+  margin-top: 15px;
+  color: #999;
+  font-style: italic;
+}
+
+audio {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

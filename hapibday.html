@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .card {
+      background: #111;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      padding: 20px;
+      max-width: 600px;
+    }
+
+    .birthday {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #9d8cff;
+    }
+
+    p {
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .muted {
+      color: #aaa;
+      margin-top: 15px;
+      font-style: italic;
+    }
+
+    #clickToPlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.9);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em;
+      cursor: pointer;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <!-- Audio -->
+  <audio id="music" loop preload="auto">
+    <source src="hapibday.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="clickToPlay">🎵 Click anywhere to start the music 🎵</div>
+
+  <div class="card">
+    <img src="myphoto.png" alt="birthday" class="birthday">
+    <h1>Dear, Anton Yohann!</h1>
+    <p>
+      Hello to my favorite guy — the sweetest, funniest, and most amazing person I’ve ever met! 
+      Today is your special day, and I want it to be filled with happiness, laughter, and love. 
+      I made you this small gift to show my appreciation and to remind you how special you are to me.
+      
+      I know it’s not much, but it comes from the heart. I hope this little effort brings a smile 
+      to your face and makes your birthday even brighter. You truly deserve all the best things in life. 
+      Wishing you endless happiness, success, and more birthdays filled with love and joy.
+    </p>
+    <p>
+      Happy Birthday! Here’s to more memories, laughter, and wonderful moments ahead! 💛
+    </p>
+    <p class="muted">- Sherie Mei -</p>
+  </div>
+
+  <script>
+    const music = document.getElementById("music");
+    const overlay = document.getElementById("clickToPlay");
+
+    overlay.addEventListener("click", () => {
+      music.play();
+      overlay.style.display = "none";
+    });
+  </script>
+</body>
+</html>
